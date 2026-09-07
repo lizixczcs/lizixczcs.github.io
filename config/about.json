@@ -1,7 +1,7 @@
 {
   "heading": "About Me",
   "text": "",
-  "languages": ["Python", "", "", ""],
+  "languages": ["Python"],
   "tools": ["Git", "Pycharm", "Linux", "VS Code", "Source"],
   "interests": ["Open Source", "", "Automation", "UI Design"]
 }
