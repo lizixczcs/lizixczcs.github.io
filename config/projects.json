@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Telegram Bot",
+    "description": "A feature-rich Telegram bot with inline commands, scheduling, and a plugin system.",
+    "icon": "🤖",
+    "technologies": ["Python", "Telegram", "API"],
+    "github": "https://github.com/username/telegram-bot",
+    "demo": "https://example.com"
+  },
+  {
+    "name": "Portfolio Site",
+    "description": "This very website — a lightweight static developer profile built for GitHub Pages.",
+    "icon": "🚀",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "github": "https://github.com/username/portfolio",
+    "demo": ""
+  },
+  {
+    "name": "Game Overlay",
+    "description": "A minimal in-game overlay for tracking stats and toggling widgets on the fly.",
+    "icon": "🎮",
+    "technologies": ["Electron", "TypeScript", "React"],
+    "github": "https://github.com/username/game-overlay",
+    "demo": ""
+  },
+  {
+    "name": "API Toolkit",
+    "description": "A collection of small utilities and wrappers for working with REST and WebSocket APIs.",
+    "icon": "🧰",
+    "technologies": ["Node.js", "REST", "WebSocket"],
+    "github": "https://github.com/username/api-toolkit",
+    "demo": "https://example.com"
+  }
+]

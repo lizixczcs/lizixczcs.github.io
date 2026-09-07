@@ -1,0 +1,7 @@
+{
+  "heading": "About Me",
+  "text": "I'm a self-taught developer who loves turning ideas into clean, fast software. When I'm not coding, you'll find me gaming, experimenting with new tools, or tinkering with side projects late into the night.",
+  "languages": ["Python", "JavaScript", "TypeScript", "Go"],
+  "tools": ["Git", "Docker", "Linux", "VS Code", "Figma"],
+  "interests": ["Open Source", "Game Dev", "Automation", "UI Design"]
+}

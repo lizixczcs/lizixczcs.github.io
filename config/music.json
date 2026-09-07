@@ -1,0 +1,19 @@
+{
+  "playlist": [
+    {
+      "title": "Track One",
+      "artist": "My Artist",
+      "file": "music/track1.mp3"
+    },
+    {
+      "title": "Track Two",
+      "artist": "My Artist",
+      "file": "music/track2.mp3"
+    },
+    {
+      "title": "Track Three",
+      "artist": "My Artist",
+      "file": "music/track3.mp3"
+    }
+  ]
+}

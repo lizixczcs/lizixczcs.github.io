@@ -1,1 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0510" />
+  <meta name="description" content="Personal developer profile — projects, music and more." />
+  <title>Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Animated background -->
+  <div class="bg-fx" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="grid-overlay"></div>
+  </div>
 
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <nav class="nav-inner" aria-label="Primary">
+      <a href="#home" class="nav-logo">
+        <span class="nav-dot" aria-hidden="true"></span>
+        <span id="nav-name">profile</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#music">Music</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero / Profile -->
+    <section class="hero section" id="home">
+      <div class="hero-card glass reveal">
+        <div class="avatar-ring">
+          <img id="avatar" class="avatar" src="assets/avatar.png" alt="Profile avatar" width="140" height="140" />
+          <span class="status-dot" id="status-dot" title="Online"></span>
+        </div>
+        <h1 class="username" id="username">@MyNickname</h1>
+        <p class="tagline" id="tagline">Developer • Gamer • Creator</p>
+        <p class="bio" id="bio"></p>
+        <div class="status-line">
+          <span class="status-pill"><span class="status-dot-sm" id="status-dot-sm"></span><span id="status-text">Online</span></span>
+        </div>
+        <div class="social" id="social-links" role="list"></div>
+      </div>
+    </section>
+
+    <!-- Music Player -->
+    <section class="section" id="music">
+      <div class="section-head reveal">
+        <h2 class="section-title">Music</h2>
+        <p class="section-sub">Press play to start the vibe.</p>
+      </div>
+
+      <div class="player glass reveal" role="region" aria-label="Music player">
+        <div class="player-main">
+          <div class="now-playing">
+            <div class="np-art" id="np-art" aria-hidden="true">
+              <div class="np-bars"><span></span><span></span><span></span><span></span></div>
+            </div>
+            <div class="np-meta">
+              <span class="np-title" id="track-title">—</span>
+              <span class="np-artist" id="track-artist">—</span>
+            </div>
+          </div>
+
+          <div class="progress-wrap">
+            <span class="time" id="current-time">0:00</span>
+            <input type="range" id="seek" class="seek" min="0" max="100" value="0" step="0.1" aria-label="Seek" />
+            <span class="time" id="duration">0:00</span>
+          </div>
+
+          <div class="controls">
+            <button class="ctrl" id="shuffle" aria-label="Shuffle" aria-pressed="false" title="Shuffle">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 3h5v5"/><path d="M4 20 21 3"/><path d="M21 16v5h-5"/><path d="m15 15 6 6"/><path d="M4 4l5 5"/></svg>
+            </button>
+            <button class="ctrl" id="prev" aria-label="Previous track" title="Previous">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 20 9 12l10-8v16z"/><path d="M5 19V5"/></svg>
+            </button>
+            <button class="ctrl ctrl-play" id="play" aria-label="Play" title="Play">
+              <svg id="play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4l14 8-14 8V4z"/></svg>
+              <svg id="pause-icon" class="hidden" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h4v16H6z"/><path d="M14 4h4v16h-4z"/></svg>
+            </button>
+            <button class="ctrl" id="next" aria-label="Next track" title="Next">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4l10 8-10 8V4z"/><path d="M19 5v14"/></svg>
+            </button>
+            <button class="ctrl" id="repeat" aria-label="Repeat" aria-pressed="false" title="Repeat">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg>
+            </button>
+          </div>
+
+          <div class="volume-wrap">
+            <button class="ctrl ctrl-sm" id="mute" aria-label="Mute" title="Mute">
+              <svg id="vol-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+              <svg id="mute-icon" class="hidden" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="m23 9-6 6"/><path d="m17 9 6 6"/></svg>
+            </button>
+            <input type="range" id="volume" class="volume" min="0" max="1" step="0.01" value="0.7" aria-label="Volume" />
+          </div>
+        </div>
+
+        <ul class="playlist" id="playlist" aria-label="Playlist"></ul>
+        <audio id="audio" preload="metadata"></audio>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="section-head reveal">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-sub">A few things I&apos;ve been building.</p>
+      </div>
+      <div class="projects-grid" id="projects-grid"></div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="section-head reveal">
+        <h2 class="section-title" id="about-heading">About Me</h2>
+      </div>
+      <div class="about glass reveal">
+        <p class="about-text" id="about-text"></p>
+        <div class="about-groups" id="about-groups"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer-copy" id="footer-copy"></p>
+    <p class="footer-built">Built with HTML, CSS and JavaScript.</p>
+    <div class="footer-social" id="footer-social" role="list"></div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
